@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Informations de la Base de Données</title>
+</head>
+<body>
+    <h1>Informations de la Base de Données</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Colonne 1</th>
+                <th>Colonne 2</th>
+                <!-- Ajoutez d'autres en-têtes de colonnes selon votre structure de table -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for resultat in resultats %}
+            <tr>
+                <td>{{ resultat[0] }}</td>
+                <td>{{ resultat[1] }}</td>
+                <!-- Ajoutez d'autres cellules de données selon votre structure de table -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
