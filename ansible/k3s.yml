@@ -17,3 +17,6 @@
   - name: Enable k3s
     shell: sudo systemctl enable k3s
 
+  - name: Afficher le contenu du fichier
+    ansible.builtin.cat:
+      path: 
