@@ -17,7 +17,3 @@
   - name: Enable k3s
     shell: sudo systemctl enable k3s
 
-  - name: install k9s
-    shell: curl -sS https://webinstall.dev/k9s | bash
-
-    
