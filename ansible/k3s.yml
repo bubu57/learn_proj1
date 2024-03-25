@@ -1,0 +1,23 @@
+---
+- host: k3s
+  become : true
+
+  tasks:
+
+  - name: Update system
+    apt:
+      update_cache: true
+
+  - name: install k3s
+    shell: curl -sfL https://get.k3s.io | sh -
+
+  - name: Start k3s
+    shell: sudo systemctl start k3s
+
+  - name: Enable k3s
+    shell: sudo systemctl enable k3s
+
+  - name: install k9s
+    shell: curl -sS https://webinstall.dev/k9s | bash
+
+    
